@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style type="text/css">
+  	.container{
+    display: grid;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px;
+    gap: 4px;
+    
+
+}
+
+
+.answer{
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: x-large;
+    background-color: rgb(66, 66, 66);
+    color: white;
+}
+
+#clear{
+    width: 309px;
+    height: 70px;
+}
+
+.main{
+    display: grid;
+    justify-content: center;
+    
+}
+.op{
+  background-color: #ff6f3c;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color:cornflowerblue;
+    color: cornsilk;
+    font-size: x-large;
+    
+}
+
+.btn:hover{
+    background-color:rgb(131, 174, 255) ;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <div class="main">
+    
+    <form action=""  name="forms">
+      <input readonly type="text" class="answer" name="answer"><br><br>
+      <div class="container">
+      <input type="button" class="btn" value="1" onclick="forms.answer.value += '1' ">
+      <input type="button" class="btn" value="2" onclick="forms.answer.value += '2' ">
+      <input type="button" class="btn" value="3" onclick="forms.answer.value += '3' ">
+
+      <input type="button" class="btn" value="4" onclick="forms.answer.value += '4' ">
+      <input type="button" class="btn" value="5" onclick="forms.answer.value += '5' ">
+      <input type="button" class="btn" value="6" onclick="forms.answer.value += '6' ">
+
+      <input type="button" class="btn" value="7" onclick="forms.answer.value += '7' ">
+      <input type="button" class="btn" value="8" onclick="forms.answer.value += '8' ">
+      <input type="button" class="btn" value="9" onclick="forms.answer.value += '9' ">
+
+      <input type="button" class="btn op" id="add" value="+" onclick="forms.answer.value += '+' ">
+      <input type="button" class="btn op" id="sub" value="-" onclick="forms.answer.value += '-' ">
+      <input type="button" class="btn op" id="mul" value="x" onclick="forms.answer.value += '*' ">
+
+      <input type="button" class="btn op" id="divide" value="÷" onclick="forms.answer.value += '/' ">
+      <input type="button" class="btn" value="0" onclick="forms.answer.value += '0' ">
+      <input type="button" class="btn op" id="equals" value="=" onclick="forms.answer.value = eval(forms.answer.value) ">
+
+      <input type="button" class="btn op" value="CLEAR" id="clear" onclick="forms.answer.value = '' ">
+    
+      </div>
+    </form>
+  </div>
+  
+
+</body>
+</html>
+
